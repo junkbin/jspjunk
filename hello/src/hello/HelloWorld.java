@@ -8,10 +8,10 @@ public class HelloWorld {
 		try {
 			
 			// STEP 1
-			Class.forName("com.mysql.jdbc.Driver");  
+			Class.forName("com.mysql.cj.jdbc.Driver");  
 			
 			// STEP - 2
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "");
+			Connection con = DriverManager.getConnection("jdbc:mysql://192.168.64.4:3306/test", "mysql", "mysql");
 			
 			// Check the connection
 			System.out.println("Connection Successufl :: " + con );
@@ -19,8 +19,6 @@ public class HelloWorld {
 			
 			// STEP - LAST
 			con.close();
-			
-			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
